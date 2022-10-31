@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          autoCreateTopics: false
+          autoAddPartitions: false
+          replicationFactor: 3
+      bindings:
+        clearingHouseSplitOutput:
+          destination: test_fund_split_topic
+          producer:
+            partitionKeyExpression: payload.requestId

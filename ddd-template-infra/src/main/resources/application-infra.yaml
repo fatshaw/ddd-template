@@ -1,0 +1,19 @@
+spring:
+  config:
+    import: application-kafka.yml
+    # import: application-kafka-transactional.yml
+  jpa:
+    open-in-view: false
+
+  redis:
+    host: localhost #to be overwrote
+
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+
+  flyway:
+    baseline-on-migrate: true
+    out-of-order: true
+    ignore-missing-migrations: true
+
+

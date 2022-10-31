@@ -1,0 +1,12 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  profiles:
+    active: local
+    include: infra
+  application:
+    name: dddtemplate

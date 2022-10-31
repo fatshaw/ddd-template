@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          autoCreateTopics: false
+          autoAddPartitions: false
+          replicationFactor: 3
+          transaction:
+            transaction-id-prefix: tx-${random.uuid}
+      bindings:
+        clearingHouseSplitOutput:
+          destination: test_fund_split_topic
+          producer:
+            partitionKeyExpression: payload.requestId
+
+  kafka:
+    producer:
+      acks: -1
