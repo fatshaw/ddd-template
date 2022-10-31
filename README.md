@@ -2,7 +2,7 @@
 
 ## Target
 
-Build a project template based on DDD Pattern
+Build a springboot project template based on DDD Pattern
 
 ### Given
 
