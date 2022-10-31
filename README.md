@@ -1,4 +1,4 @@
-# paymentacceptance-ddd-template
+# ddd-template
 
 ## Target
 
