@@ -6,9 +6,9 @@ import com.fatshaw.dddtemplate.domain.fundsplit.model.valueobject.FundSplitEvent
 import com.fatshaw.dddtemplate.domain.fundsplit.model.valueobject.FundSplitEvent.ON_CREATE
 import com.fatshaw.dddtemplate.domain.fundsplit.model.valueobject.SourceStatus.PENDING
 import com.fatshaw.dddtemplate.domain.fundsplit.repository.FundSplitRepository
-import com.fatshaw.dddtemplate.domain.shared.DomainService
-import com.fatshaw.dddtemplate.domain.shared.failure.DomainFailure.SourceStatusInvalid
-import com.fatshaw.dddtemplate.domain.shared.failure.Failure
+import com.fatshaw.dddtemplate.ddd.common.DomainService
+import com.fatshaw.dddtemplate.ddd.common.failure.DomainFailure.SourceStatusInvalid
+import com.fatshaw.dddtemplate.ddd.common.failure.Failure
 import io.vavr.control.Either
 import io.vavr.control.Either.left
 import io.vavr.control.Either.right

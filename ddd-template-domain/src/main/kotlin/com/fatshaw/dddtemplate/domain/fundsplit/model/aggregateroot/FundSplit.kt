@@ -1,11 +1,11 @@
 package com.fatshaw.dddtemplate.domain.fundsplit.model.aggregateroot
 
+import com.fatshaw.dddtemplate.ddd.common.AggregateRoot
 import com.fatshaw.dddtemplate.domain.fundsplit.model.event.FundSplitDomainEvent
 import com.fatshaw.dddtemplate.domain.fundsplit.model.valueobject.FundSplitEvent
 import com.fatshaw.dddtemplate.domain.fundsplit.model.valueobject.FundSplitStatus
 import com.fatshaw.dddtemplate.domain.fundsplit.model.valueobject.FundSplitStatusEnum
 import com.fatshaw.dddtemplate.domain.fundsplit.model.valueobject.SourceType
-import com.fatshaw.dddtemplate.domain.shared.AggregateRoot
 import java.math.BigDecimal
 import java.util.*
 
