@@ -3,6 +3,7 @@ package com.fatshaw.dddtemplate.infrastructure.repository
 import com.fatshaw.dddtemplate.domain.fundsplit.model.aggregateroot.FundSplit
 import com.fatshaw.dddtemplate.ddd.common.pagination.Page
 import com.fatshaw.dddtemplate.ddd.common.pagination.Pageable
+import com.fatshaw.dddtemplate.domain.fundsplit.repository.FundSplitRepository
 import com.fatshaw.dddtemplate.infrastructure.message.ClearinghouseFundSplitPublisher
 import com.fatshaw.dddtemplate.infrastructure.message.dto.SyncFundSplitsDto
 import com.fatshaw.dddtemplate.infrastructure.repository.dao.FundSplitDao
@@ -16,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional
 class DefaultFundSplitRepository(
     val fundSplitDao: FundSplitDao,
     val publisher: ClearinghouseFundSplitPublisher
-) : com.fatshaw.dddtemplate.domain.fundsplit.repository.FundSplitRepository {
+) : FundSplitRepository {
     override fun findByAccountIdAndSource(
         accountId: String,
         sourceId: String?,
