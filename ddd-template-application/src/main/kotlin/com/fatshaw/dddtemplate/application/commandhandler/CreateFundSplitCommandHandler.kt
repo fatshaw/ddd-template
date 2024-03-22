@@ -4,6 +4,7 @@ import com.fatshaw.dddtemplate.application.command.CreateFundSplitCommand
 import com.fatshaw.dddtemplate.application.command.CreateFundSplitCommandResult
 import com.fatshaw.dddtemplate.domain.fundsplit.service.FundSplitService
 import com.fatshaw.dddtemplate.ddd.common.CommandHandler
+import com.fatshaw.dddtemplate.domain.fundsplit.model.aggregateroot.FundSplit
 import org.springframework.stereotype.Service
 import java.util.*
 
@@ -16,7 +17,7 @@ class CreateFundSplitCommandHandler(val fundSplitService: FundSplitService) :
     }
 
     private fun CreateFundSplitCommand.buildFundSplit() =
-        com.fatshaw.dddtemplate.domain.fundsplit.model.aggregateroot.FundSplit(
+        FundSplit(
             id = "spt_${UUID.randomUUID()}",
             platformAccountId = platformAccountId,
             accountId = accountId,
